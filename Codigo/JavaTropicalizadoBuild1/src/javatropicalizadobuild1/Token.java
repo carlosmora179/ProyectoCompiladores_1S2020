@@ -6,8 +6,11 @@
 package javatropicalizadobuild1;
 
 /**
- *
- * @author carlo
+ *Clase: Token
+ * Entradas: string con la palabra
+ * Salidas: true si el patron concuerda con algun token del enum 
+ * false si no concuerda con nunguno
+ * PD: esta clase funciona como estructura de datos para la lista de los tokens.
  */
 public class Token {
     
@@ -31,24 +34,26 @@ public class Token {
         this.valor = valor;
     }
  
-   
-    
+    /**
+     * Lista de tokens con su patron para ser comparado e identificado.
+     */
     enum Tipos {
         
         OP_BINARIO("^[&&|<|+|-]$"),
-        COMENTARIO ("/[*](.|[\\r\\n])*?[*]/"),
-        
-        DELIMITADOR_DER ("^[)]$|^[}]$|^[;]$"),
-        DLIMITADOR_IZQ  ("^[(]$|^[{]$"),
-        RESERVADA ("^clase$|^publico$|^estatico$|^principal$|^vacio$|^nuevo$|^mostrarlinea$|^si$|^sino$|^retornar$|^Cadena[^0-9a-zA-Z]*$"),
+        COMENTARIO_INICIO ("^/[*]$"),
+        COMENTARIO_FIN ("^[*]/$"),
+        FIN_EJECUCION ("^[;]$"),
+        DELIMITADOR_DER ("^[)]$|^[}]$"),
+        DELIMITADOR_IZQ  ("^[(]$|^[{]$"),
+        RESERVADA ("^clase$|^publico$|^estatico$|^inicial$|^vacio$|^nuevo$|^mostrarlinea$|^si$|^sino$|^retornar$|^Cadena[^0-9a-zA-Z]*$"),
         IDENTIFICADOR ("^[^\\d].*[a-zA-Z_0-9]*"),
-        ENTERO_REAL ("^[0-9]+$")
+        ENTERO_REAL ("^[0-9]+$");
+       
+        public final String patron;/**variable para sacar el patron de la lista de tokens.*
         
-        
-        ;
-        //clase]|[publico]|[estatico]|[principal]|[vacio]|[nuevo]|[mostrarlinea]|[si]|[sino]|[retornar]|[Cadena]
- 
-        public final String patron;
+        /**
+         *Contructor de la lista enum de tokens se encarga de setear el patron solicitado. 
+         */
         Tipos(String s) {
             this.patron = s;
         }

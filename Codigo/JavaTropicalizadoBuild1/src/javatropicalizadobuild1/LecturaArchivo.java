@@ -5,50 +5,81 @@
  */
 package javatropicalizadobuild1;
 
+import java.awt.EventQueue;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.JFileChooser;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class LecturaArchivo {
     String rutaArchivo = "";
     BufferedReader brArchivo ;
 
-    
-    
-    
-    
-    public static String lectura(){
+    public static void lectura(){
+        AnalizadorLexico analizador = new AnalizadorLexico();
+        BufferedReader objReader = null; 
+        String ruta ="";
         
-        //String flatFile = "H:\\GitKraken\\ProyectoCompiladores_1S2020\\Codigo\\JavaTropicalizadoBuild1\\CodigosPruebas\\factorial.txt" ;
+        ArrayList<Token> lista = new ArrayList<Token>();
         
-        String cadena = "";
-        //String fileAsString = FileUtils.readFileToString(reportFile);
-        /*Scanner scanner;
+        Scanner entrada = null;
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.showOpenDialog(fileChooser);
         try {
-            scanner = new Scanner(new File(flatFile));
-            scanner.useDelimiter("\r\n");
-        while (scanner.hasNext()) {
-            String line = scanner.next();
-            scanner.;
-                                     
-            System.out.println(line);
+            ruta = fileChooser.getSelectedFile().getAbsolutePath();                                        
             
+        } catch (NullPointerException e) {
+            System.out.println("No se ha seleccionado ningún fichero");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (entrada != null) {
+                entrada.close();
+            }
+        }
+        
+        try{  
+            String strCurrentLine;
+            int lineas = 1;
+            objReader = new BufferedReader(new FileReader(ruta));   
+            
+            while ((strCurrentLine = objReader.readLine()) != null) {
+                
+                   
+                if(!strCurrentLine.equals("")){
+                
+                    strCurrentLine = strCurrentLine.replaceAll("    ","");
+                    try {
+                        lista.addAll(analizador.Tokenizador(strCurrentLine)); 
+
+                    } catch (Exception e) {
+                        throw new RuntimeException(" en la linea>"+(lineas)+" "+e.getCause(),e);
+                    }
+                    lineas++;
+                }
+            }
+            
+        } catch (IOException e ){ 
+            System.out.println("error");
+            e.printStackTrace();  
+        }
+        finally{   
+            try{   
+                if (objReader != null)     objReader.close();  
+            } catch (IOException ex) {   
+                ex.printStackTrace();  
+            }
+            if(lista !=null){
+            for(Token elem : lista){
+            System.out.println(elem.getTipo()+" : "+elem.getValor());
+            }
         }
             
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(LecturaArchivo.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-        
-       
-        
-        
-        return cadena;
+        }
     }
-   
 }
