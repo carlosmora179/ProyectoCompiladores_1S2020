@@ -1,0 +1,5 @@
+clase Factorial {
+        publico estatico vacio inicial ( Cadena[] a ) {
+            mostrarlinea ( nuevo Fac().ComputeFac( 10 ) ) ;
+        }
+}
