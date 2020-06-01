@@ -39,13 +39,18 @@ public class Token {
      */
     enum Tipos {
         
-        OP_BINARIO("^[&&|<|+|-]$"),
+        OP_BINARIO("^[&&|<|+|!|*]$|^[-]$"),
+        OP_ASIGNACION ("^=$"),
         COMENTARIO_INICIO ("^/[*]$"),
         COMENTARIO_FIN ("^[*]/$"),
         FIN_EJECUCION ("^[;]$"),
         DELIMITADOR_DER ("^[)]$|^[}]$"),
         DELIMITADOR_IZQ  ("^[(]$|^[{]$"),
-        RESERVADA ("^clase$|^publico$|^estatico$|^inicial$|^vacio$|^nuevo$|^mostrarlinea$|^si$|^sino$|^retornar$|^Cadena[^0-9a-zA-Z]*$"),
+        RESERVADA ("^clase$|^mientras$|^largo$"
+                + "|^ent$|^publico$|^estatico$|^inicial$"
+                + "|^vacio$|^nuevo$|^mostrarlinea$|^si$"
+                + "|^sino$|^retornar$|^Cadena[^0-9a-zA-Z]*$"
+                + "|^verdadero$|^falso$|^esto$|^extiende$|^[.]$"),
         IDENTIFICADOR ("^[^\\d].*[a-zA-Z_0-9]*"),
         ENTERO_REAL ("^[0-9]+$");
        
