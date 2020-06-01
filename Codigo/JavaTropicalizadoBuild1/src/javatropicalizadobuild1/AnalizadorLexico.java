@@ -20,14 +20,14 @@ public class AnalizadorLexico {
     
     
     
-    public static ArrayList<Token> Analizador(String cadena){
+    public static ArrayList<Token> Tokenizador(String cadena){
        ArrayList<Token> tokens = new ArrayList<Token>() ;
        
        String[] spliter = cadena.split(" ");
-       String[] spliter2 = cadena.split("/");
-       System.out.println(spliter2[0]+" separacion "+spliter2[1]);
+       //String[] spliter2 = cadena.split("/");
+       //System.out.println(spliter2[0]+" separacion "+spliter2[1]);
        for( String palabra : spliter ){
-           
+           //System.out.println("encontre: "+palabra);
            boolean bandera = false;
         for(Tipos token: Tipos.values())
        {
@@ -41,20 +41,32 @@ public class AnalizadorLexico {
             tokentemp.setValor(palabra);
             tokens.add(tokentemp);
         }
-       
+        
        }
+        if(bandera== false){
+            
+            Exception r = new RuntimeException("Se ha encontrado un error en la palabra: "+palabra);
+            throw new RuntimeException("Error en token", r);
+            
+        }
     }
-       
        return tokens;
     } 
+    public static String Analizador(ArrayList<Token> tokens){
+        String error ="";
+        
+        return error;
+    }
     
     public static void main(String[] args) {
-       ArrayList<Token> lista = Analizador("if ( 3 + 3 ) /*as das dfd   sfw*/");
+       ArrayList<Token> lista = Tokenizador("clase Factorial { publico estatico vacio inicial ( Cadena[] a ) { mostrarlinea ( nuevo Fac().ComputeFac( 10 ) ) ; } }");
+       if(lista !=null){
        for(Token elem : lista){
            System.out.println(elem.getTipo()+" : "+elem.getValor());
        }
+       }
     }
     
-    
+    //clase Factorial { publico estatico vacio inicial ( Cadena[] a ) { mostrarlinea ( nuevo Fac().ComputeFac( 10 ) ); } }
 }
 

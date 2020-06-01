@@ -34,11 +34,19 @@ public class Token {
    
     
     enum Tipos {
-        ENTERO_REAL ("[0-9]+"),
-        OP_BINARIO("[&&|<|+|-]"),
-        COMENTARIO ("/[*](.|[\\r\\n])*?[*]/"),
-        IDENTIFICADOR ("^[^\\d].*[a-zA-Z_0-9]+");
         
+        OP_BINARIO("^[&&|<|+|-]$"),
+        COMENTARIO ("/[*](.|[\\r\\n])*?[*]/"),
+        
+        DELIMITADOR_DER ("^[)]$|^[}]$|^[;]$"),
+        DLIMITADOR_IZQ  ("^[(]$|^[{]$"),
+        RESERVADA ("^clase$|^publico$|^estatico$|^principal$|^vacio$|^nuevo$|^mostrarlinea$|^si$|^sino$|^retornar$|^Cadena[^0-9a-zA-Z]*$"),
+        IDENTIFICADOR ("^[^\\d].*[a-zA-Z_0-9]*"),
+        ENTERO_REAL ("^[0-9]+$")
+        
+        
+        ;
+        //clase]|[publico]|[estatico]|[principal]|[vacio]|[nuevo]|[mostrarlinea]|[si]|[sino]|[retornar]|[Cadena]
  
         public final String patron;
         Tipos(String s) {
