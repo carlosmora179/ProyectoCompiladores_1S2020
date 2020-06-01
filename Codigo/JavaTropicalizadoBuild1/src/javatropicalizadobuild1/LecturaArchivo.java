@@ -7,9 +7,11 @@ package javatropicalizadobuild1;
 
 import java.awt.EventQueue;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -75,6 +77,21 @@ public class LecturaArchivo {
                 ex.printStackTrace();  
             }
             if(lista !=null){
+                String nombre = ".//salida.txt";
+                File archivo = new File(nombre);
+                
+                try{
+                    BufferedWriter bw = new BufferedWriter(new FileWriter(nombre));
+                    for(Token elem : lista){
+                        bw.write(elem.getTipo()+" : "+elem.getValor()+"\n");
+                        
+                    }
+                    bw.close();
+                }
+                catch(IOException ioe){
+                    ioe.printStackTrace();
+                }
+                
             for(Token elem : lista){
             System.out.println(elem.getTipo()+" : "+elem.getValor());
             }
