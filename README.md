@@ -20,12 +20,12 @@ terminando el proceso con una excepción indicando las características de la mi
 # Instalación y ejecución :hammer: :memo:
 
   Para la ejecución del código es necesario abrir una terminal de sistema donde debe ubicarse dentro de la carpeta dist del proyecto la cual se encuentra 
-en "..\ProyectoCompiladores_1S2020\Codigo\JavaTropicalizadoBuild1\dist" y aca se debe ejecutar el comando 
+en "..\ProyectoCompiladores_1S2020\Codigo\JavaTropicalizadoBuild1\dist" y acá se debe ejecutar el comando 
 "java -jar JavaTropicalizadoBuild1.jar [Path archivo de entrada] [nombre de salida.txt]" cabe aclarar que esta linea es para el SO Windows10, seguido 
 se generará un archivo con el nombre especificado donde se encuentra la salida de ejecución del programa.
   
- Además para la edición del código es necesario un editor de codigo java ademas de los ambientes de trabajo 
-para la maquina virtual el codigo actual de cre utilizando el JDK1.8 y java en su version 8.
+ Para la edición del código es necesario un editor de codigo java, además de los ambientes de trabajo 
+para la maquina virtual el codigo actual se creó utilizando el JDK1.8 y java en su version 8.
 
 ## Importante :heavy_exclamation_mark:
 El codigo a ejecutar debe estar separado por espacios en blanco entre cada una de sus palabras ejemplo: publico vacio programa ( ent numero ) { } ; 
