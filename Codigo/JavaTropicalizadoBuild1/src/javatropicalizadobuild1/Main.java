@@ -21,7 +21,7 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-           lectura(); 
+           lectura(args[0],args[1]); 
         } catch (Exception e) {
             //e.printStackTrace();
             System.out.println("Error:"+e.getMessage());

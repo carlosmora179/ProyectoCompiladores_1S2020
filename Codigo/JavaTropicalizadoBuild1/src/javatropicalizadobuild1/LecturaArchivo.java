@@ -22,28 +22,18 @@ public class LecturaArchivo {
     String rutaArchivo = "";
     BufferedReader brArchivo ;
 
-    public static void lectura(){
+    public static void lectura(String entrada, String salida){
         AnalizadorLexico analizador = new AnalizadorLexico();
         BufferedReader objReader = null; 
         String ruta ="";
         
         ArrayList<Token> lista = new ArrayList<Token>();
         
-        Scanner entrada = null;
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.showOpenDialog(fileChooser);
-        try {
-            ruta = fileChooser.getSelectedFile().getAbsolutePath();                                        
+        
+        
+        ruta = entrada;                                        
             
-        } catch (NullPointerException e) {
-            System.out.println("No se ha seleccionado ningún fichero");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        } finally {
-            if (entrada != null) {
-                entrada.close();
-            }
-        }
+        
         
         try{  
             String strCurrentLine;
@@ -66,9 +56,12 @@ public class LecturaArchivo {
                 }
             }
             
-        } catch (IOException e ){ 
-            System.out.println("error");
+        } catch (IOException e ){
+            
             e.printStackTrace();  
+        }catch(RuntimeException p){
+            throw new RuntimeException("error en el archivo de entrada no existe o formato invalido",p);
+
         }
         finally{   
             try{   
@@ -77,7 +70,7 @@ public class LecturaArchivo {
                 ex.printStackTrace();  
             }
             if(lista !=null){
-                String nombre = ".//salida.txt";
+                String nombre = ".//"+salida;
                 File archivo = new File(nombre);
                 
                 try{
@@ -91,10 +84,7 @@ public class LecturaArchivo {
                 catch(IOException ioe){
                     ioe.printStackTrace();
                 }
-                
-            for(Token elem : lista){
-            System.out.println(elem.getTipo()+" : "+elem.getValor());
-            }
+               
         }
             
         }

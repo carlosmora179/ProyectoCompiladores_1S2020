@@ -19,9 +19,10 @@ terminando el proceso con una excepción indicando las características de la mi
 
 # Instalación y ejecución :hammer: :memo:
 
-  En la carpeta del código se encuentra un carpeta llamada dist en la cual se encutra el archivo ejecutable de la 
-aplicación donde basta con darle doble click al mismo y localizar el archivo de prueba y posteriormente el programara 
-generará otro .txt llamado salida.txt en el que se encuentran todos los tokens identificados y clasificados.
+  Para la ejecución del código es necesario abrir una terminal de sistema donde debe ubicarse dentro de la carpeta dist del proyecto la cuanse encuentra 
+en "..\ProyectoCompiladores_1S2020\Codigo\JavaTropicalizadoBuild1\dist" y aca se debe ejecutar el comando 
+"java -jar JavaTropicalizadoBuild1.jar [Path archivo de entrada] [nombre de salida.txt]" cabe aclarar que esta linea es para el SO Windows10, seguido 
+se generará un archivo con el nombre especificado donde se encuentra la salida de ejecución del programa.
   
  Además para la edición del código es necesario un editor de codigo java ademas de los ambientes de trabajo 
 para la maquina virtual el codigo actual de cre utilizando el JDK1.8 y java en su version 8.
