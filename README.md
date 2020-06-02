@@ -25,3 +25,7 @@ generará otro .txt llamado salida.txt en el que se encuentran todos los tokens 
   
  Además para la edición del código es necesario un editor de codigo java ademas de los ambientes de trabajo 
 para la maquina virtual el codigo actual de cre utilizando el JDK1.8 y java en su version 8.
+
+## Importante :heavy_exclamation_mark:
+El codigo a ejecutar debe estar separado por espacios en blanco entre cada una de sus palabras ejemplo: publico vacio programa ( ent numero ) { } ; 
+como se puede observar se encuentra con una separacion de 1 espacio en cada una de sus palabras validas. 
