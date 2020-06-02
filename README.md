@@ -19,7 +19,7 @@ terminando el proceso con una excepción indicando las características de la mi
 
 # Instalación y ejecución :hammer: :memo:
 
-  Para la ejecución del código es necesario abrir una terminal de sistema donde debe ubicarse dentro de la carpeta dist del proyecto la cuanse encuentra 
+  Para la ejecución del código es necesario abrir una terminal de sistema donde debe ubicarse dentro de la carpeta dist del proyecto la cual se encuentra 
 en "..\ProyectoCompiladores_1S2020\Codigo\JavaTropicalizadoBuild1\dist" y aca se debe ejecutar el comando 
 "java -jar JavaTropicalizadoBuild1.jar [Path archivo de entrada] [nombre de salida.txt]" cabe aclarar que esta linea es para el SO Windows10, seguido 
 se generará un archivo con el nombre especificado donde se encuentra la salida de ejecución del programa.
