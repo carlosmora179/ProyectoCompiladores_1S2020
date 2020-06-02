@@ -84,7 +84,10 @@ public class LecturaArchivo {
                 catch(IOException ioe){
                     ioe.printStackTrace();
                 }
-               
+                
+            for(Token elem : lista){
+            System.out.println(elem.getTipo()+" : "+elem.getValor());
+            }
         }
             
         }

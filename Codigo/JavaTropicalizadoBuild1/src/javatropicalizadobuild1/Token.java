@@ -39,7 +39,7 @@ public class Token {
      */
     enum Tipos {
         
-        OP_BINARIO("^[&&|<|+|!|*]$|^[-]$"),
+        OP_BINARIO("^[&&|<|>|+|!|*]$|^[-]$"),
         OP_ASIGNACION ("^=$"),
         COMENTARIO_INICIO ("^/[*]$"),
         COMENTARIO_FIN ("^[*]/$"),

@@ -1,12 +1,11 @@
 ent fibonacci ( ent n )
 {
-    si ( n > 1 ) {
-        retornar fibonacci ( n - 1 ) + fibonacci ( n - 2 ) ;  /*  función recursiva */
+    si ( n > 1 ) { retornar fibonacci ( n - 1 ) + fibonacci ( n - 2 ) ; /* funcion recursiva */
     }
-    sino si ( n = 1 ) {  /* caso base 1 */
+    sino si ( n = 1 ) { /* caso base 1 */
         retornar 1 ;
     }
-    sino si ( n =  0 ) {  /* caso base  2 */
+    sino si ( n = 0 ) { /* caso base 2 */
         retornar 0 ;
     }
 }
