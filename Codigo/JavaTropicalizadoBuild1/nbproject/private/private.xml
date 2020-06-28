@@ -4,7 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/H:/GitKraken/ProyectoCompiladores_1S2020/Codigo/JavaTropicalizadoBuild1/src/javatropicalizadobuild1/LecturaArchivo.java</file>
+            <file>file:/H:/GitKraken/ProyectoCompiladores_1S2020/Codigo/JavaTropicalizadoBuild1/src/javatropicalizadobuild1/Token.java</file>
             <file>file:/H:/GitKraken/ProyectoCompiladores_1S2020/Codigo/JavaTropicalizadoBuild1/src/javatropicalizadobuild1/Main.java</file>
+            <file>file:/H:/GitKraken/ProyectoCompiladores_1S2020/Codigo/JavaTropicalizadoBuild1/src/javatropicalizadobuild1/AnalizadorLexico.java</file>
         </group>
     </open-files>
 </project-private>

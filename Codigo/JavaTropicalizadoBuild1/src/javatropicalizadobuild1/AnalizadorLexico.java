@@ -44,8 +44,7 @@ public class AnalizadorLexico {
            
                 Pattern patron =Pattern.compile(token.patron);
                 Matcher matcher = patron.matcher(palabra);
-        
-                if(matcher.find()&& bandera == false ){
+                if(matcher.matches()&& bandera == false ){
                     bandera = true;
                     if(comentarioActivo == false){
                         Token tokentemp = new Token();

@@ -1,6 +1,6 @@
 clase Factorial {
-        publico estatico vacio inicial ( Cadena[] a ) {
-            mostrarlinea ( nuevo Fac() . ComputeFac( 10 ) ) ;
+        publico estatico vacio inicial ( Cadena [ ] a ) {
+            mostrarlinea ( nuevo Fac ( ) . ComputeFac ( 10 ) ) ;
         }
 }
 clase Fac {
@@ -9,7 +9,7 @@ clase Fac {
         si ( num < 1 )
             num_aux = 1 ;
         sino
-            num_aux = num * ( esto . ComputeFac( num - 1 ) ) ;
+            num_aux = num * ( esto . ComputeFac ( num - 1 ) ) ;
     retornar num_aux ;
     }
 }
