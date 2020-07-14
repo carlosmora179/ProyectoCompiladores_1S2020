@@ -37,7 +37,7 @@ public class Token {
     /**
      * Lista de tokens con su patron para ser comparado e identificado.
      */
-    enum Tipos {
+    public enum Tipos {
         
         OP_BINARIO("^[&&|<|>|+|!|*]$|^[-]$"),
         OP_ASIGNACION ("^=$"),
