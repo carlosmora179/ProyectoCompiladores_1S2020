@@ -9,7 +9,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author carlo
+ * @author Carlos
+ * @author Jose
+ * @author Kevin
  */
 public class DeclaraciondeMetodoProd1 extends DeclaraciondeMetodo {
     public Reservada A,B,C;

@@ -7,7 +7,9 @@ package ASTjavatropicalizado;
 
 /**
  *
- * @author carlo
+ * @author Carlos
+ * @author Jose
+ * @author Kevin
  */
 public class DelimitadorIzq extends Terminal{
     String valor;

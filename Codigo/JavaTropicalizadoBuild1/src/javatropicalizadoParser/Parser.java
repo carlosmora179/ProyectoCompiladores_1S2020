@@ -27,7 +27,9 @@ import javatropicalizadobuild1.Token.Tipos;
 
 /**
  *
- * @author carlos
+ * @author Carlos
+ * @author Jose
+ * @author Kevin
  * DeclaraciondeClase ::= “clase” identificador 
  * ( “extiende” Identificador)? “{“ ( DeclaraciondeVariable )* 
  * ( DeclaraciondeMetodo )* “}”

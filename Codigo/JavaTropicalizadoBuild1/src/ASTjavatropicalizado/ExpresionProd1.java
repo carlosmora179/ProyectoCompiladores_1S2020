@@ -7,7 +7,9 @@ package ASTjavatropicalizado;
 
 /**
  *
- * @author carlo
+ * @author Carlos
+ * @author Jose
+ * @author Kevin
  */
 public class ExpresionProd1 extends Expresion {
     public identificador Id;

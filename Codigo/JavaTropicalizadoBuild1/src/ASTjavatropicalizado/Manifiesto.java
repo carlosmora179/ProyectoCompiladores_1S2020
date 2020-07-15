@@ -7,7 +7,9 @@ package ASTjavatropicalizado;
 
 /**
  *
- * @author carlo
+ * @author Carlos
+ * @author Jose
+ * @author Kevin
  */
 public abstract class Manifiesto extends AST{
     
